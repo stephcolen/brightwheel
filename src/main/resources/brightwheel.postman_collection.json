@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "671988cd-65ec-4894-99f5-e4c1ca6811f6",
+		"name": "brightwheel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25363485"
+	},
+	"item": [
+		{
+			"name": "Get Culumative Count",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"36d5658a-6908-479e-887e-a949ec199272\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cumulative-count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cumulative-count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Latest Reading",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"36d5658a-6908-479e-887e-a949ec199272\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/latest-reading",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"latest-reading"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Reading",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"36d5658a-6908-479e-887e-a949ec199272\",\n    \"readings\": [\n        {\n            \"timestamp\": \"2021-09-29T16:08:15+01:00\",\n            \"count\": 2\n        },\n        {\n            \"timestamp\": \"2021-09-29T16:09:15+01:00\",\n            \"count\": 15\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
